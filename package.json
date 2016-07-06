@@ -1,0 +1,32 @@
+{
+  "name": "tdd-mongo-and-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harrietty/TDD-node-and-mongo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harrietty/TDD-node-and-mongo/issues"
+  },
+  "homepage": "https://github.com/harrietty/TDD-node-and-mongo#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.5.3",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "sinon": "^1.17.4",
+    "sinon-mongoose": "^1.2.1"
+  }
+}
