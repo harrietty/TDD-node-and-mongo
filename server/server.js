@@ -5,17 +5,18 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const app = express();
 const config = require('../config');
+const router = require('./router');
+mongoose.connect(config.db);
+mongoose.connection.on('connected', function () {
+  console.log('Mongoose connection open to ' + config.db);
+});
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({'extended': 'true'}));
 app.use(bodyParser.json());
 app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 app.use(methodOverride());
-
-mongoose.connect(config.db);
-mongoose.connection.on('connected', function () {
-  console.log('Mongoose connection open to ' + config.db);
-});
+app.use('/api', router);
 
 app.listen(config.port, function (err) {
   if (err) throw err;
