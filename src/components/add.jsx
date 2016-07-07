@@ -15,7 +15,9 @@ const AddTodo = (props) => {
         <input type='text' ref={node => {
           input = node;
         }} />
-        <button type='submit'>Add</button>
+        <div className='button-container'>
+          <button type='submit'>Add</button>
+        </div>
       </form>
     </div>
   );

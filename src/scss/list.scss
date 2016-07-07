@@ -1,3 +1,68 @@
+.main {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #F5F7EB;
+  border-radius: 12px;
+  padding: 20px;
+  h2 {
+    font-family: 'Helvetica', sans-serif;
+    color: #22241C;
+  }
+  .add-todo {
+    input {
+      width: 50%;
+      display: block;
+      margin: 0 auto;
+      height: 23px;
+      border: 0px;
+      border-radius: 8px;
+      font-family: Helvetica, sans-serif;
+      font-size: 15px;
+      padding: 4px;
+    }
+    .button-container {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+    }
+    button {
+      width: 100px;
+      background-color: #F2337F;
+      border: 0px;
+      box-shadow: none;
+      border-radius: 5px;
+      height: 30px;
+      font-size: 20px;
+    }
+  }
+}
+
 .completed {
   text-decoration: line-through;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  li {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    line-height: 50px;
+    background-color: azure;
+    border-radius: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: 'Helvetica';
+    margin: 20px;
+    .todo-check {
+      width: 100px;
+      display: flex;
+      input {
+        width: 50px;
+        height: 42px;
+      }
+    }
+  }
 }

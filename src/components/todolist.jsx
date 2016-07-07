@@ -13,15 +13,17 @@ const TodoList = React.createClass({
       if (todo.completed) classN = 'completed';
       else classN = '';
       return (
-        <li key={i} className={classN}>
-          {todo.todo}
+        <li key={i}>
+          <div className={classN + ' todo-text'}>{todo.todo}</div>
+          <div className='todo-check'>
           {todo.completed === false && (
             <input type='checkbox' onChange={this.props.handleChange} id={todo._id} />
           )}
           {todo.completed && (
             <input type='checkbox' checked='checked' onChange={this.props.handleChange} id={todo._id} />
           )}
-          <span id={todo._id} onClick={this.props.deleteTodo}>X</span>
+          <span id={todo._id} onClick={this.props.deleteTodo} className='todo-delete'>Delete</span>
+          </div>
         </li>
       );
     });
