@@ -14,7 +14,7 @@ From inside the project directory run `npm i` to install dependencies.
 npm i
 ```
 
-You will need MongoDB running locally. Run the `mongod` command in another terminal window to start a Mongo instance.
+You will need MongoDB running locally. Run the `mongod` command in another terminal window to start a Mongo instance, assuming you already have Mongo installed on your machine.
 
 ```
 mongod
@@ -29,7 +29,7 @@ npm start
 Go to your browser and open the app:
 
 ```
-http://localhost:8087/
+http://localhost:8000/
 ```
 
 If you want to run the test suite:
