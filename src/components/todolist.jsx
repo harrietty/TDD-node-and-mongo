@@ -21,6 +21,7 @@ const TodoList = React.createClass({
           {todo.completed && (
             <input type='checkbox' checked='checked' onChange={this.props.handleChange} id={todo._id} />
           )}
+          <span id={todo._id} onClick={this.props.deleteTodo}>X</span>
         </li>
       );
     });
@@ -45,6 +46,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     handleChange: (e) => {
       dispatch(actions.updateTodo(e.currentTarget.id, e.currentTarget.checked))
+    },
+    deleteTodo: (e) => {
+      dispatch(actions.deleteTodo(e.currentTarget.id));
     }
   };
 };

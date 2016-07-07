@@ -49,5 +49,13 @@ export const reducer = (state = initialState, action = {}) => {
     return newState;
   }
 
+  if (action.type === types.DELETE_SUCCESS) {
+    const index = _.findIndex(newState.todos, todo => {
+      return todo._id === action.id;
+    });
+    newState.todos.splice(index, 1);
+    return newState;
+  }
+
   return state;
 };

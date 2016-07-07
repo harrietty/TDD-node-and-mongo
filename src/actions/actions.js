@@ -31,6 +31,12 @@ export const actions = {
       todo
     };
   },
+  deleteSuccess: (id) => {
+    return {
+      type: types.DELETE_SUCCESS,
+      id
+    };
+  },
   submitError: (error) => {
     return {
       type: types.SUBMIT_ERROR,
@@ -69,6 +75,17 @@ export const actions = {
       .catch(error => {
         dispatch(actions.submitError(error));
       })
+    }
+  },
+  deleteTodo: (id) => {
+    return (dispatch) => {
+      return axios.delete(`/api/todo/${id}`)
+      .then(response => {
+        dispatch(actions.deleteSuccess(response.data.id));
+      })
+      .catch(error => {
+        dispatch(actions.submitError(error));
+      });
     }
   }
 };

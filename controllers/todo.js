@@ -42,7 +42,7 @@ const todoCtrl = {
         res.json({status: false, error: 'Oops!'});
         return;
       } else {
-        res.json({status: true, message: 'Deleted successfully'});
+        res.json({id: req.params.id});
       }
     });
   }

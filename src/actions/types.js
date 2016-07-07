@@ -4,3 +4,4 @@ export const CANNOT_GET_LIST = 'CANNOT_GET_LIST';
 export const POST_SUCCESS = 'POST_SUCCESS';
 export const SUBMIT_ERROR = 'SUBMIT_ERROR';
 export const UPDATE_SUCCESS = 'UPDATE_SUCCESS';
+export const DELETE_SUCCESS = 'DELETE_SUCCESS';
