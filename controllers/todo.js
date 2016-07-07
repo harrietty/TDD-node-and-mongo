@@ -7,7 +7,7 @@ const todoCtrl = {
         res.json({status: false, error: 'Oops!'});
         return;
       } else {
-        res.json({status: true, todos: todos});
+        res.status(200).json({status: true, todos: todos});
       }
     });
   },
@@ -18,7 +18,7 @@ const todoCtrl = {
         res.json({status: false, error: 'Oops!'});
         return;
       } else {
-        res.json(todo);
+        res.status(201).json(todo);
       }
     });
   },

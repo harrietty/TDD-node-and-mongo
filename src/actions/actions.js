@@ -62,7 +62,7 @@ export const actions = {
         dispatch(actions.postSuccess(response.data));
       })
       .catch(error => {
-        dispatch(actions.submitError(error));
+        dispatch(actions.submitError(error.statusText));
       });
     }
   },

@@ -1,4 +1,7 @@
 # Todo App
+
+This simple todo app uses Express to make get, post, put and delete requests to an API, which interacts with a local MongoDB instance. React and redux are used on the front-end.
+
  Clone this repository using the command line.
 
 ```
@@ -27,6 +30,12 @@ Go to your browser and open the app:
 
 ```
 http://localhost:8087/
+```
+
+If you want to run the test suite:
+
+```
+npm test
 ```
 
 Happy todo-ing!

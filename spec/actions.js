@@ -56,6 +56,30 @@ describe('Actions', function () {
     });
   });
 
+  describe('actions.updateSuccess', function () {
+    it('should be a method', function () {
+      expect(actions.updateSuccess).to.be.a('function');
+    });
+    it('should return the correct action', function () {
+      expect(actions.updateSuccess({todo: 'sample'})).to.eql({
+        type: types.UPDATE_SUCCESS,
+        todo: {todo: 'sample'}
+      });
+    });
+  });
+
+  describe('actions.deleteSuccess', function () {
+    it('should be a method', function () {
+      expect(actions.deleteSuccess).to.be.a('function');
+    });
+    it('should return the correct action', function () {
+      expect(actions.deleteSuccess(123)).to.eql({
+        type: types.DELETE_SUCCESS,
+        id: 123
+      });
+    });
+  });
+
   describe('actions.submitError', function () {
     it('should be a method', function () {
       expect(actions.submitError).to.be.a('function');
