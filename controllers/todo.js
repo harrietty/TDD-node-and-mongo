@@ -1,6 +1,6 @@
 var Todo = require('../models/todo');
 
-var todoCtrl = {
+const todoCtrl = {
   GetTodos: function (req, res) {
     Todo.find({}, function (err, todos) {
       if (err) {
@@ -18,20 +18,20 @@ var todoCtrl = {
         res.json({status: false, error: 'Oops!'});
         return;
       } else {
-        res.json({status: true, message: 'Todo saved!'});
+        res.json(todo);
       }
     });
   },
   UpdateTodo: function (req, res) {
-    var complete = req.body.completed;
+    var completed = req.body.completed;
     Todo.findById(req.params.id, function (err, todo) {
-      todo.completed = complete;
+      todo.completed = completed;
       todo.save(function (err, todo) {
         if (err) {
           res.json({status: false, error: 'Oops!'});
           return;
         } else {
-          res.json({status: true, message: 'Update successful'});
+          res.json(todo);
         }
       });
     });

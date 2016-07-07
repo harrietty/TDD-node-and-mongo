@@ -11,6 +11,7 @@ mongoose.connection.on('connected', function () {
   console.log('Mongoose connection open to ' + config.db);
 });
 
+app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({'extended': 'true'}));
 app.use(bodyParser.json());
